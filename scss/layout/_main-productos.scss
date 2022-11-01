@@ -1,0 +1,58 @@
+.VentaProductos {
+    display: grid;
+    grid-template-columns: (2, 1fr);
+    grid-template-rows: repeat(5 1fr);
+    grid-template-areas:
+    "h1 h1"
+    "box-1 box-1"
+    "box-2 box-2"
+    "box-3 box-3"
+    "box-4 .";
+    h1 {
+      text-align: center;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      grid-area: h1;
+    }
+  
+    div {
+      display: flex;
+      margin: 80px 100px 80px 100px;
+      padding: 20px 10p 20px 10px;
+      gap: 45px;
+    }
+  
+    img {
+      width: 200px;
+      height: 200px;
+    }
+  
+    p {
+      font-size: 15px;
+    }
+  
+    button {
+      width: fit-content;
+      height: fit-content;
+    }
+  }
+  
+  .Box-1 {
+    grid-area: box-1;
+  }
+  
+  .Box-2 {
+    grid-area: box-2;
+  }
+  
+  .Box-3 {
+    grid-area: box-3;
+  }
+  
+  .Box-4 {
+    grid-area: box-4;
+  }
+  
+  .Box-1 img:hover, .Box-2 img:hover, .Box-3 img:hover, .Box-4 img:hover {
+    transform: scale(1.2);
+  }

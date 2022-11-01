@@ -1,408 +1,319 @@
-*{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-}
-body{
-    font-family: 'Segoe UI', Tahoma, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: "Segoe UI", Tahoma, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
-/** Barra de navegación **/ 
-header{
-    background-color: #aaaaac;
-    display: flex;
-    height: 100px;
+header {
+  background-color: #aaaaac;
+  display: flex;
+  height: 100px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  padding-left: 10px;
+  height: 70px;
+  border-radius: 50%;
+}
+.logo img:hover {
+  transform: scale(1.1);
+}
+.logo h1 {
+  padding-left: 18px;
+  color: black;
+  text-decoration: none;
+  font-size: 40px;
+}
+.logo h1:hover {
+  transform: scale(1.1);
+}
+
+.navBar {
+  list-style: none;
+  font-size: 30px;
+  padding-right: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.navBar li a {
+  text-decoration: none;
+  color: black;
+  padding: 20px 10px 20px 10px;
+}
+.navBar li a:hover {
+  color: antiquewhite;
+  transform: scale(2.2);
+}
+
+.navBar1:hover, .navBar2:hover, .navBar3:hover, .navBar4:hover, .navBar5:hover {
+  transform: scale(1.1);
+}
+
+main {
+  justify-items: space-between 5px;
+}
+
+section div img {
+  width: 100%;
+  height: 550px;
+}
+
+.ProductosDestacados h2 {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+section .ProductosDestacados div {
+  width: 250px;
+  height: 50px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+  margin: 200px 0px 220px 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section .ProductosDestacados img {
+  width: 100%;
+  height: 200px;
+}
+
+.VentaProductos {
+  display: grid;
+  grid-template-columns: 2, 1fr;
+  grid-template-rows: repeat(5 1fr);
+  grid-template-areas: "h1 h1" "box-1 box-1" "box-2 box-2" "box-3 box-3" "box-4 .";
+}
+.VentaProductos h1 {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  grid-area: h1;
+}
+.VentaProductos div {
+  display: flex;
+  margin: 80px 100px 80px 100px;
+  padding: 20px 10p 20px 10px;
+  gap: 45px;
+}
+.VentaProductos img {
+  width: 200px;
+  height: 200px;
+}
+.VentaProductos p {
+  font-size: 15px;
+}
+.VentaProductos button {
+  width: fit-content;
+  height: fit-content;
+}
+
+.Box-1 {
+  grid-area: box-1;
+}
+
+.Box-2 {
+  grid-area: box-2;
+}
+
+.Box-3 {
+  grid-area: box-3;
+}
+
+.Box-4 {
+  grid-area: box-4;
+}
+
+.Box-1 img:hover, .Box-2 img:hover, .Box-3 img:hover, .Box-4 img:hover {
+  transform: scale(1.2);
+}
+
+.Nosotros {
+  background-color: #aaaaac;
+  margin: 50px 40px 50px 40px;
+  padding: 20px 10px 20px 10px;
+  background-image: radial-gradient(#aaaaac, rgb(102, 95, 95));
+}
+
+.QuienesSomos, .Mision, .Vision {
+  margin: 30px 60px 30px 60px;
+}
+
+.InformacionYContacto {
+  padding: 50px 100px 50px 100px;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: " informacion contacto" " mapa  .";
+}
+.InformacionYContacto img {
+  width: 30px;
+  height: 30px;
+}
+
+.Informacion {
+  grid-area: informacion;
+}
+
+.Contacto {
+  grid-area: contacto;
+}
+
+.Mapa {
+  grid-area: mapa;
+}
+
+.Registro {
+  margin: 100px 100px 100px 100px;
+  padding: 20px 20px 20px 20px;
+  background-color: #aaaaac;
+}
+
+footer {
+  background-color: rgb(0, 0, 255);
+}
+
+.PiePagina {
+  padding: 20px 0px 20px 0px;
+  display: flex;
+  flex-direction: row;
+}
+.PiePagina div {
+  margin: 5px 0px 5px 20px;
+  font-size: 22px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.PiePagina div img {
+  width: 22px;
+  height: 22px;
+}
+.PiePagina div a {
+  text-decoration: none;
+  color: black;
+}
+.PiePagina div a:hover {
+  color: white;
+}
+
+/*tablet*/
+@media (max-width: 768px) {
+  /**Header**/
+  header {
+    height: 20%;
     width: 100%;
-    justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
-
-}
-.logo{
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-}
-
-.logo img{
-    padding-left: 10px;
-    height: 70px;
+  }
+  .logo {
+    grid-area: logo;
+    padding-left: 30px;
+  }
+  .logo img {
+    height: 40px;
     border-radius: 50%;
-}
-.logo img:hover{
-    transform: scale(1.1);
-}
-.logo h1{
-    padding-left: 18px;
-    color: black;
-    text-decoration: none;
-    font-size: 40px;
-}
-.logo h1:hover{
-    transform: scale(1.1);
-}
-.navBar{
-    list-style: none;
-    font-size: 30px;
-    padding-right: 25px;
+  }
+  .navBar {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-}
-
-.navBar li a{
-    text-decoration: none;
-    color: black;
-    padding: 20px 10px 20px 10px;
-}
-
-.navBar li a:hover{
+    justify-items: center;
+    width: 100%;
+    font-size: 25px;
+    align-content: center;
+    flex-wrap: wrap;
+    padding-left: 40px;
+  }
+  .navBar li a:hover {
     color: antiquewhite;
     transform: scale(2.2);
-}
-
-.navBar1:hover{
-    transform: scale(1.1);
-}
-.navBar2:hover{
-    transform: scale(1.1);
-}
-.navBar3:hover{
-    transform: scale(1.1);
-}
-.navBar4:hover{
-    transform: scale(1.1);
-}
-.navBar5:hover{
-    transform: scale(1.1);
-}
-
-
-
-
-/** Página principal **/
-main{
-    justify-items: space-between 5px;
-}
-section div img{
-    width: 100%;
-    height: 550px;
-}
-.ProductosDestacados h2{
+  }
+  /**pagina principal**/
+  .ProductosDestacados {
     display: flex;
-    align-content: center;
-    justify-content: center;
-}
-section .ProductosDestacados div{
-    width: 250px;
-    height: 50px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: black;
-    margin: 200px 0px 220px 500px;
+    align-items: center;
+    flex-direction: column;
+    padding-right: 400px;
+  }
+  .ProductosDestacados h2 {
+    padding-left: 380px;
+  }
+  /*productos*/
+  .VentaProductos, .Box-1, .Box-2, .Box-3 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-}
-section .ProductosDestacados img{
-    width: 100%;
-    height: 200px;
-}
-
-
-
-
-
-/**Página productos **/
-
-.VentaProductos{
-    display: grid;
-    grid-template-columns: (2, 1fr);
-    grid-template-rows: repeat(5 1fr);
-    grid-template-areas:
-    "h1 h1"
-    "box-1 box-1"
-    "box-2 box-2"
-    "box-3 box-3"
-    "box-4 .";
-}
-
-.VentaProductos h1{
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    grid-area: h1;
-}
-
-.VentaProductos div{
-    display: flex;
-    margin: 80px 100px 80px 100px;
-    padding: 20px 10p 20px 10px;
-    gap: 45px;
-}
-.VentaProductos img{
-    width: 200px;
-    height: 200px;
-}
-.VentaProductos p{
-    font-size: 15px;
-}
-
-.VentaProductos button{
-    width: fit-content;
-    height: fit-content;
-}
-
-.Box-1{
-    grid-area: box-1;
-}
-.Box-2{
-    grid-area: box-2;
-}
-.Box-3{
-    grid-area: box-3;
-}
-.Box-4{
-    grid-area: box-4;
-}
-
-.Box-1 img:hover{
-    transform: scale(1.2);
-}
-.Box-2 img:hover{
-    transform: scale(1.2);
-}
-.Box-3 img:hover{
-    transform: scale(1.2);
-}
-.Box-4 img:hover{
-    transform: scale(1.2);
-}
-
-
-
-/**Página Nosotros **/
-.Nosotros{
-    background-color: #aaaaac;
-    margin: 50px 40px 50px 40px;
-    padding: 20px 10px 20px 10px;
-    background-image: radial-gradient(#aaaaac, rgb(102, 95, 95) );
-}
-.QuienesSomos{
-    margin: 30px 60px 30px 60px;
-}
-.Mision{
-    margin: 30px 60px 30px 60px;
-}
-.Vision{
-    margin: 30px 60px 30px 60px;
-}
-
-
-
-
-/** Página contacto **/
-.InformacionYContacto{
-    padding: 50px 100px 50px 100px;
     align-items: center;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: 
-    " informacion contacto"
-    " mapa  .";
+  }
 }
-.InformacionYContacto img{
-    width: 30px;
-    height: 30px;
-}
-
-.Informacion{
-    grid-area: informacion;
-}
-.Contacto{
-    grid-area: contacto;
-}
-.Mapa{
-    grid-area: mapa;
-}
-
-
-
-/** Página registro **/
-.Registro{
-    margin: 100px 100px 100px 100px;
-    padding: 20px 20px 20px 20px;
-    background-color: #aaaaac;
-}
-
-
-
-/** Pie de página **/
-footer{
-    background-color: rgb(0, 0, 255);
-}
-.PiePagina{
-    padding: 20px 0px 20px 0px;
-    display: flex;
-    flex-direction: row;
-}
-.PiePagina div img{
-    width: 22px;
-    height: 22px;
-    
-}
-.PiePagina div{
-    margin: 5px 0px 5px 20px;
-    font-size: 22px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.PiePagina div a{
-    text-decoration: none;
-    color: black;
-}
-.PiePagina div a:hover{
-    color: white
-}
-
-/*Tablet*/
-@media (max-width: 768px){
-    /**Header**/
-    header{
-        height: 20%;
-        width: 100%;
-        flex-wrap: wrap;
-    }
-    .logo{
-        grid-area: logo;
-        padding-left: 30px;   
-    }
-    .logo img{
-        height: 40px;
-        border-radius: 50%;
-    }
-    .navBar{
-        display: flex;
-        flex-direction: row;
-        justify-items: center;
-        width: 100%;
-        font-size: 25px;
-        align-content: center;
-        flex-wrap: wrap;
-        padding-left: 40px;
-    }
-    .navBar li a:hover{
-        color: antiquewhite;
-        transform: scale(2.2);
-    }
-
-    /**pagina principal**/
-    .ProductosDestacados h2{
-        padding-left: 380px;
-    }
-    .ProductosDestacados{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        padding-right: 400px;
-    }
-
-    /*productos*/
-    .VentaProductos{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .Box-1{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .Box-2{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .Box-3{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-
-
-
-
 /*Mobile*/
-@media (max-width: 576px){
-/*Navbar*/
-    header{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    .navBar{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    .navBar li a:hover{
-        color: antiquewhite;
-    }
-    .navBar1{
-        padding-top: 15px;
-    }
-    .navBar2{
-        padding-top: 15px;
-    }
-    .navBar3{
-        padding-top: 30px;
-    }
-    .navBar4{
-        padding-top: 30px;
-    }
-    .navBar5{
-        padding-top: 30px;
-    }
-    /*Pagina principal*/
-    .ProductosDestacados{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-/*Contacto*/
-    .InformacionYContacto{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-areas:
-        "informacion"
-        "contacto"
-        "mapa";
-    }
-    .Informacion{
-        grid-area: informacion;
-    }
-    .Contacto{
-        grid-area: contacto;
-    }
-    .Mapa{
-        grid-area: mapa;
-    }
-
-
-/*pie de pagina*/
-    .PiePagina{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, 1fr);
-        flex-wrap: wrap;
-    }
-    .PiePagina div a:hover{
-        color: white
-    }
+@media (max-width: 576px) {
+  /*Navbar*/
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .navBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .navBar li a:hover {
+    color: antiquewhite;
+  }
+  .navBar1, .navBar2 {
+    padding-top: 15px;
+  }
+  .navBar3, .navBar4, .navBar5 {
+    padding-top: 30px;
+  }
+  /*Pagina principal*/
+  .ProductosDestacados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /*Contacto*/
+  .InformacionYContacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "informacion" "contacto" "mapa";
+  }
+  .Informacion {
+    grid-area: informacion;
+  }
+  .Contacto {
+    grid-area: contacto;
+  }
+  .Mapa {
+    grid-area: mapa;
+  }
+  /*pie de pagina*/
+  .PiePagina {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    flex-wrap: wrap;
+  }
+  .PiePagina div a:hover {
+    color: white;
+  }
 }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,71 @@
+@media (max-width: 576px) {
+    /*Navbar*/
+  
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  
+    .navBar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+  
+      li a:hover {
+        color: antiquewhite;
+      }
+    }
+  
+    .navBar1, .navBar2 {
+      padding-top: 15px;
+    }
+  
+    .navBar3, .navBar4, .navBar5 {
+      padding-top: 30px;
+    }
+  
+    /*Pagina principal*/
+  
+    .ProductosDestacados {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    /*Contacto*/
+  
+    .InformacionYContacto {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-areas: "informacion" "contacto" "mapa";
+    }
+  
+    .Informacion {
+      grid-area: informacion;
+    }
+  
+    .Contacto {
+      grid-area: contacto;
+    }
+  
+    .Mapa {
+      grid-area: mapa;
+    }
+  
+    /*pie de pagina*/
+  
+    .PiePagina {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, 1fr);
+      flex-wrap: wrap;
+  
+      div a:hover {
+        color: white;
+      }
+    }
+  }
